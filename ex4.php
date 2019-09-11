@@ -10,8 +10,21 @@
   'dask'    => ['Prénom' => 'Damien', 'Nom' => 'Askier', 'Age' => 7 , 'Ville' => 'Villetaneuse']
 ]; ?>
 
-<?php echo "<table>";
-foreach ($personnes as $c => $v)
-  echo "<tr><td> $c </td></tr><tr><td> $v </td></tr>" ?>
+
+<?php function tableau($tabp){
+
+echo "<table>";
+foreach ($tabp as $key){
+  echo "<tr>";
+  foreach ($key as $p => $u){
+    echo "<td> $u  </td>";
+  }
+}
+  echo "</tr>";
+echo "</table>";
+}
+tableau($personnes)
+?>
+
 
 <?php require('fin_code_html.php');?>
